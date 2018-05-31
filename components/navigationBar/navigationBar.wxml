@@ -1,0 +1,8 @@
+<view wx:if='{{platform=="android"}}' class="wrapper" style="position: {{position}};background-color:{{backgroundColor}};display:flex;align-items: center;justify-content: left;height:72px;">
+  	<image catchtap="navigateBack" src='../static/{{bgcgroundColor==white?"jiantouBlack.svg":"jiantouWhite.svg"}}' style="width:60rpx;height:60rpx;margin-top: 25px;margin-left: 10px"></image>
+  	<view style="margin-top: 25px;margin-left: 10px;font-size: 18px">{{title}}</view>
+</view>
+<view wx:if='{{platform=="ios"||platform=="devtools"}}' class="wrapper" style="position: {{position}};background-color:{{backgroundColor}};height:65px;display:flex;align-items: center;justify-content: center;">
+  	<image catchtap="navigateBack" src='../static/{{bgcgroundColor==white?"jiantouBlack.svg":"jiantouWhite.svg"}}' style="width:60rpx;height:60rpx;position:absolute;left:10px;bottom:10px"></image>
+  	<view style="margin-top: 18px;font-size: 18px">{{title}}</view>
+</view>
